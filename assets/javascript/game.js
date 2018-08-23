@@ -23,6 +23,7 @@ document.onkeyup = function() {
             }
             if (gameOver === true) {
                 lastPresident = currentPresident;
+                writeInfo(lastPresident);
                 newGame();
             }
         }      

@@ -25,3 +25,15 @@ p {
     width: 100%;
     text-align: center;
 }
+
+#info_img {
+    float: left;
+}
+
+#info_section {
+    position: absolute;
+    border: blue solid 2px;
+    top: 500px;
+    width: 90%;
+    left: 5%;
+}

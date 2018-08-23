@@ -7,8 +7,8 @@ var word = "";
 var blanksWord = "";
 var lettersGuessed = [];
 var userguess = "";
-var currentPresident = {};
-var lastPresident = {};
+var currentPresident;
+var lastPresident;
 
 // variables representing page content
 var gameTitleText = document.getElementById("game_title");
@@ -19,7 +19,9 @@ var guessesLeftText = document.getElementById("guessesLeft_text");
 var winsText = document.getElementById("wins_text");
 var lossesText = document.getElementById("losses_text");
 var infoSection = document.getElementById("info_section");
-
+var infoImage = document.getElementById("info_img");
+var infoName = document.getElementById("info_name");
+var infoStats = document.getElementById("info_stats");
 //
 function writeInstructions(text) {
     instructionsText.innerHTML = text;
@@ -45,6 +47,11 @@ function writeLosses() {
     lossesText.innerHTML = "Losses: " + losses;
 }
 
+function writeInfo(pres) {
+    infoImage.innerHTML = '<img src="' + pres.imageLink + '" width=200= height="auto">';
+    infoName.innerHTML = pres.fullName;
+    infoStats.innerHTML = "Year born: " + pres.yearBorn + "<br>Year died: " + pres.yearDied + "<br>Years of presidency: " + pres.officeBegan + " - " + pres.officeEnded + "<br>Political party: " + pres.party;
+}
 
 // function for choosing random president from the array (returns president object)
 function randomPresident() {
@@ -65,7 +72,6 @@ function makeBlanksWord(word0) {
     }
     return blanksWord0;
 }
-
 
 // function to reset game
 function newGame() {
