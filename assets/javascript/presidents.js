@@ -16,7 +16,7 @@ function President(first, last, born, died, pres_start, pres_end, party, img) {
 /* Create array for storing the data */
 var presidentsArray = [];
 
-/* Create objects for each President and store them in an array. */
+/* Create objects for each President and store them in the array. */
 presidentsArray[0] = new President("George", "Washington", 1732, 1799, 1789, 1797, "none", "assets/images/pres01.jpg");
 presidentsArray[1] = new President("John", "Adams", 1735, 1826, 1797, 1801, "Federalist", "assets/images/pres02.jpg");
 presidentsArray[2] = new President("Thomas", "Jefferson", 1743, 1826, 1801, 1809, "assets/images/pres03.jpg");
