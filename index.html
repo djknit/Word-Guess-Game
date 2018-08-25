@@ -5,35 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Linking my CSS -->
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Kalam|Shadows+Into+Light+Two" rel="stylesheet"> 
+    <!-- Meyer Reset -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!-- My Stylesheet -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     
     <title>Hangman Game</title>
 </head>
 <body>
     
-    <h1 id="game_title">Hangman</h1>
-    
-    <p id="instructions_text">Press any key to begin!</p>
+    <h1 id="game_title">Hangman: U.S. Presidents Edition</h1>
     
     <!-- Display the word being guessed (starts as blanks) -->
-    <p id="blanksWord_text"></p>
+    <p id="blanksWord_text" class="game_text"></p>
     
     <!-- Display letters guessed -->
-    <p id="lettersGuessed_text"></p>
+    <p id="lettersGuessed_text" class="game_text"></p>
 
     <!-- Display number of guesses remaining -->
-    <p id="guessesLeft_text"></p>
+    <p id="guessesLeft_text" class="game_text"></p>
     
-    <br>
-
     <!-- Display number of wins and losses -->
-    <p id="wins_text"></p>
-    <p id="losses_text"></p>
+    <div id="wins_and_losses">
+        <p id="wins_text"></p>
+        <p id="losses_text"></p>    
+    </div>
+
+    <!-- Display instructions/messages -->
+    <p id="instructions_text" class="game_text">Press any key to begin!</p>
+
+    <!-- Hangman drawing -->
+    <img id="hangman_drawing" src="" height="400" width="auto">
 
     <!-- Display info about President from last round -->
     <div id="info_section">
-        <h1 id="info_title">Last Round:</h1>
+        <h1 id="info_title"></h1>
         <div id="info_img"></div>
         <p id="info_name"></p>
         <p id="info_stats"></p>
@@ -43,7 +51,7 @@
     <script type="text/javascript" src="assets/javascript/presidents.js"></script>
     <script type="text/javascript" src="assets/javascript/functions.js"></script>
     <script type="text/javascript" src="assets/javascript/game.js"></script>
-    <!-- <script type="text/javascript" src="assets/javascript/presidentsTest.js"></script> -->
+    <!-- <script type="text/javascript" src="assets/javascript/presidentsTest.js"></script>
 
 </body>
 </html>

@@ -18,11 +18,27 @@ var lettersGuessedText = document.getElementById("lettersGuessed_text");
 var guessesLeftText = document.getElementById("guessesLeft_text");
 var winsText = document.getElementById("wins_text");
 var lossesText = document.getElementById("losses_text");
+var hangmanDrawing = document.getElementById("hangman_drawing")
 var infoSection = document.getElementById("info_section");
+var infoTitle = document.getElementById("info_title");
 var infoImage = document.getElementById("info_img");
 var infoName = document.getElementById("info_name");
 var infoStats = document.getElementById("info_stats");
-//
+
+// function for setting the hangman drawing based on guesses left
+function setDrawing() {
+    var drawingNumber = 10 - guessesLeft;
+    var drawingName;
+    if (drawingNumber < 10) {
+        drawingName = "assets/images/hangman0" + drawingNumber + ".png";
+    }
+    else {
+        drawingName = "assets/images/hangman10.png";
+    }
+    hangmanDrawing.setAttribute("src", drawingName);
+}
+
+// Functions for writing content to various parts of the page
 function writeInstructions(text) {
     instructionsText.innerHTML = text;
 }
@@ -37,10 +53,13 @@ function writeLettersGuessed() {
 
 function writeGuessesLeft() {
     guessesLeftText.innerHTML = "Guesses left: " + guessesLeft;
+    setDrawing();
 }
 
 function writeWins() {
     winsText.innerHTML = "Wins: " + wins;
+    document.getElementById("wins_and_losses").style.border = "2px solid blue";
+    document.getElementById("wins_and_losses").style.background = "white";
 }
 
 function writeLosses() {
@@ -48,6 +67,9 @@ function writeLosses() {
 }
 
 function writeInfo(pres) {
+    infoSection.style.border = "2px solid blue";
+    infoSection.style.background = "white";
+    infoTitle.innerHTML = "Last Round:";
     infoImage.innerHTML = '<img src="' + pres.imageLink + '" width=200= height="auto">';
     infoName.innerHTML = pres.fullName;
     infoStats.innerHTML = "Year born: " + pres.yearBorn + "<br>Year died: " + pres.yearDied + "<br>Years of presidency: " + pres.officeBegan + " - " + pres.officeEnded + "<br>Political party: " + pres.party;
@@ -78,7 +100,7 @@ function newGame() {
     gameOver = false;
     // Reset letters guessed and guesses remaining
     lettersGuessed = [];
-    guessesLeft = 12;
+    guessesLeft = 9;
     //Reset word and corresponding blank word
     currentPresident = randomPresident();
     word = currentPresident.fullName;

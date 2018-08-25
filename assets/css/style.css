@@ -1,39 +1,58 @@
+body {
+    background-image: url("../images/flag.jpg")
+}
+
 #game_title {
-    font-family: papyrus;
+    font-family: 'Shadows Into Light Two', cursive;
     color: crimson;
+    border: 2px solid blue;
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
     margin: 20px;
+    padding: 20px;
+    background: white;
 }
 
-p {
+.game_text, #wins_text, #losses_text {
     text-align: center;
-    margin: 22px 0;
-    font-size: 30px;
+    font-size: 38px;
+    font-family: 'Kalam', cursive, papyrus;
+    font-size: 42px;
 }
 
-#blanksWord_text {
-    letter-spacing: 5px;
-    font-size: 40px;
-    font-family: arial, helvetica, sans-serif;
+.game_text:empty {
+    display: none;
+} 
+
+.game_text, #wins_and_losses {
+    display: inline-block;
     margin-bottom: 30px;
+    padding: 20px;
 }
 
-#instructions_text {
-    position: absolute;
-    top: 400px;
-    width: 100%;
-    text-align: center;
+.game_text, #hangman_drawing {
+    border: 2px solid blue;
+    background: white;
 }
+
 
 #info_img {
     float: left;
+    margin: 20px; 
+}
+
+#info_name, #info_stats {
+    font-family: 'courier new', sans-serif;
+    font-size: 32px;
+}
+
+#info_title {
+    font-size: 35px;
+    margin: 10px;
+    font-family: 'Shadows Into Light Two', cursive;
 }
 
 #info_section {
-    position: absolute;
-    border: blue solid 2px;
-    top: 500px;
-    width: 90%;
-    left: 5%;
+    display: inline-block;
+    /* border: blue solid 2px;  */
 }
