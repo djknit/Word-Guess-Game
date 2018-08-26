@@ -24,7 +24,9 @@ document.onkeyup = function() {
             if (gameOver === true) {
                 lastPresident = currentPresident;
                 writeInfo(lastPresident);
-                newGame();
+                setTimeout(function() {
+                    newGame();
+                }, 800);
             }
         }      
     }
