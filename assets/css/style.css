@@ -97,6 +97,10 @@ body {
     line-height: 1.5;
 }
 
+#info_section {
+    display: inline-block;
+}
+
 /* make the columns stack on top of each other for smaller screens */
 @media screen and (max-width: 768px) {
     #left_column, #right_column {
