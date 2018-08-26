@@ -1,18 +1,22 @@
+/* Background image */
 body {
-    background-image: url("../images/flag.jpg")
+    background-image: url("../images/flag.jpg");
+    text-align: center;
 }
 
+/* All styles for title */
 #game_title {
     font-family: 'Shadows Into Light Two', cursive;
     color: crimson;
     border: 2px solid blue;
     text-align: center;
     font-size: 50px;
-    margin: 20px;
+    margin: 20px 0;
     padding: 20px;
     background: white;
 }
 
+/* fonts and text colors */
 .game_text, #wins_text, #losses_text {
     text-align: center;
     font-size: 38px;
@@ -20,6 +24,22 @@ body {
     font-size: 42px;
 }
 
+#info_name, #info_stats {
+    font-family: 'courier new', sans-serif;
+    font-size: 32px;
+}
+
+#info_title {
+    font-size: 35px;
+    margin: 10px;
+    font-family: 'Shadows Into Light Two', cursive;
+}
+
+#blanksWord_text {
+    font-size: 56px;
+}
+
+/* Making boxes around text */
 .game_text:empty {
     display: none;
 } 
@@ -36,23 +56,53 @@ body {
 }
 
 
-#info_img {
-    float: left;
-    margin: 20px; 
+/* Invisible containers for holding smaller boxes in */ 
+#container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    min-width: 360px;
 }
 
-#info_name, #info_stats {
-    font-family: 'courier new', sans-serif;
-    font-size: 32px;
-}
-
-#info_title {
-    font-size: 35px;
-    margin: 10px;
-    font-family: 'Shadows Into Light Two', cursive;
-}
-
-#info_section {
+#left_column {
+    vertical-align: top;
+    width: 50%;
+    min-width: 360px;
     display: inline-block;
-    /* border: blue solid 2px;  */
+    margin-right: 5%;
+}
+
+#right_column {
+    width: 44%;
+    display: inline-block;
+}
+
+/* Hangman drawing */
+#hangman_drawing {
+    vertical-align: top;
+    width: 90%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+/* "Last round" section */
+#info_img, #info_text_section {
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
+}
+
+#info_text_section {
+    text-align: left;
+    line-height: 1.5;
+}
+
+/* make the columns stack on top of each other for smaller screens */
+@media screen and (max-width: 768px) {
+    #left_column, #right_column {
+        width: 100%;
+        /* min-width: 360px; */
+        display: inline-block;
+        margin-right: 0;
+    }
 }
