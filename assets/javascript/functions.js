@@ -106,7 +106,6 @@ function newGame() {
     word = currentPresident.fullName;
     blanksWord = makeBlanksWord(word);
 
-    console.log("word: " + word + "\nblanksWord: " + blanksWord);
     writeLettersGuessed();
     writeBlanksWord();
     writeGuessesLeft();
