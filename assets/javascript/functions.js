@@ -156,9 +156,6 @@ function checkGuess(userGuess0) {
             isWrong = false;
             newBlanksWord = newBlanksWord + word[i];
         }
-        else if (word[i] === " ") {
-            newBlanksWord = newBlanksWord + " ";
-        }
         else {
             newBlanksWord = newBlanksWord + blanksWord[i];
         }
