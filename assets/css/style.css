@@ -2,6 +2,7 @@
 body {
     background-image: url("../images/flag.jpg");
     text-align: center;
+    background-size: cover;
 }
 
 /* All styles for title */
@@ -99,6 +100,7 @@ body {
 
 #info_section {
     display: inline-block;
+    margin-bottom: 20px;
 }
 
 /* make the columns stack on top of each other for smaller screens */
